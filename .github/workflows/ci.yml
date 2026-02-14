@@ -1,0 +1,14 @@
+name: Practica CI Actions
+on: [push] # Se ejecuta con cada commit
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+      - name: Ejecutar comandos de CI
+        run: |
+          echo "Iniciando Integración Continua..."
+          node -v
+          ls -la
+          echo "Test completado con éxito"
